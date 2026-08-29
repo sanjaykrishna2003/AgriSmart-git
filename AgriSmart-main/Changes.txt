@@ -1,0 +1,67 @@
+Changes:
+if any jdbc template exists in project(it exists in analytics service) we remove and use jpa repository instead
+remove all dummy and hardcoded data in project like users,any fallbacks dummy data etc.
+and also there was an instance where after deleting farm get api was called and 404 not found was given need to find cause.
+
+farmer pages:
+
+    Dashboard:
+=the 4 data boxes-remove the pending tasks one and put documents uploaded or documents verified
+=weather module-if rainfall is 0mm then show no rainfall
+=link the officer dashboard broadcast page with the broadcasts and alerts shown in dashboard
+
+
+    crop records:
+=remove crop health or healthy crops type data as we do not get that data from anywhere we can maybe replace this with total crops (in the same 4 data boxes)
+=in the crop product card the total farm land is being shown and not the land that the crop is planted it is showing 2 acres when theres only 1.17 ac planted and 2 acre is the total farm land
+    crop details page:
+=in crop details remove health status,soil moisture and replace with other details if possible
+=check yield prediction logic and also take into account that not all crops will stay good and also we need to personalize yield prediction for type of crop
+=again rainfall 0mm=no rainfall
+    Add crop:
+=remove the checkbox to open map and keep map as mandatory to fill to register crop
+    weather page:
+=a lot of values are in excess and are not needed like precipitation,pressure,UV index,visibility
+
+
+    AI chatbot:
+=link gemini properly and also if possible research for computer vision functionality
+
+
+    Profile:
+=need to add data fields that farmers will fill so that we can store data that will be used to recommend and check eligibility for schemes like annual/monthly income.
+=need to check what data is needed from farmer side to better improve the site
+soil health page-no changes
+documents-research farmer related documents and also make it so that the uploaded documents are being stored properly and also verify what documents we can add here
+security-no changes
+notifications-remove entirely from sidebar 
+language-may be needed for full website translation to the language for now only English but in the future may add tamil
+    
+
+    Farms:
+=add back to profile button
+    Farm details:
+=remove healthy indication which exists near farm name
+=no edit option for farms (under review need to ask sir because of security concerns)
+
+
+
+
+officer pages:
+ major changes-farmer and farm crops merging and the document verification module in dashboard
+   dashboard:
+=near search bar remove the 3 horizontal bar which just focuses on the sidebar it has no functionality so not needed
+=remove the second row of data boxes the rejected docs,docs verified,rejected etc. 
+= instead we will implement a sort of interface in which the officer can approve,view,reject the docuement sent by farmer and also we show who applied which document
+=remove recently registered farmers card
+    farmers page and farm & crop page:
+=remove latitude and longitude values from farmers page view farmer details as officer does not need to know that and instead we can make it so that they view farmers land on the map
+=in view farmer sidebar(the details page of farmer) we need to add more data to crops of that specific farmer as it only shows start and end date of the crop there needs to be more data like 1.17 out of 2 acres used,yeild prediction,how long its been growing,etc).
+=so both farmers page and farm and crops page must be merged into one farmers page  and the modules of the farm and crop page come first then the farmers are displayed 
+broadcast page-no changes
+    profile:
+=let officers change their data like state and district and make sure that this data is linked with the data they receive about their respective district/state 
+=remove quick actions
+
+
+

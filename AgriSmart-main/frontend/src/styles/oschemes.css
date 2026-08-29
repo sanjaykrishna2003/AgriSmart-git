@@ -1,0 +1,851 @@
+@import "./officer_theme.css";
+
+/*==================================================
+                GLOBAL
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+
+/*==================================================
+            MAIN LAYOUT
+==================================================*/
+
+.officer-container{
+    display:flex;
+    min-height:100vh;
+    width:100%;
+}
+
+.dashboard-main{
+    flex:1;
+    padding:30px;
+    margin-left:260px;
+}
+
+/*==================================================
+                SIDEBAR
+==================================================*/
+
+.officer-sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:260px;
+    height:100vh;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(25px);
+
+    border-right:1px solid rgba(255,255,255,.15);
+
+    padding:25px;
+    z-index:1000;
+    transition:.35s;
+}
+
+.sidebar-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.sidebar-header h2{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+.sidebar-header p{
+    color:#bfdbfe;
+    margin-top:5px;
+}
+
+.sidebar-menu{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.sidebar-menu-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:15px 18px;
+
+    color:white;
+    border-radius:15px;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.sidebar-menu-item:hover{
+    background:rgba(255,255,255,.12);
+}
+
+.active-menu{
+    background:#2563eb;
+}
+
+.menu-icon{
+    font-size:18px;
+}
+
+/*==================================================
+                OVERLAY
+==================================================*/
+
+.sidebar-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.3s;
+}
+
+.show-overlay{
+    opacity:1;
+    visibility:visible;
+}
+
+.show-sidebar{
+    left:0 !important;
+}
+
+/*==================================================
+                NAVBAR
+==================================================*/
+
+.dashboard-navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:30px;
+}
+
+.navbar-left{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.menu-toggle-btn{
+    width:50px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+
+    border-radius:15px;
+    color:white;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.menu-toggle-btn:hover{
+    background:#2563eb;
+}
+
+.search-container{
+    position:relative;
+}
+
+.search-input{
+    width:340px;
+    height:50px;
+
+    border:none;
+    outline:none;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(20px);
+
+    color:white;
+
+    padding-left:50px;
+}
+
+.search-input::placeholder{
+    color:#bfdbfe;
+}
+
+.search-icon{
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#bfdbfe;
+}
+
+.navbar-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.notification-btn{
+    width:50px;
+    height:50px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    color:white;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+
+    cursor:pointer;
+}
+
+.profile-section{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+}
+
+.profile-avatar{
+    font-size:42px;
+}
+
+.profile-section p{
+    color:#bfdbfe;
+    font-size:13px;
+}
+
+/*==================================================
+            STATS SECTION
+==================================================*/
+
+.stats-section{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+
+    margin-bottom:30px;
+}
+
+.stats-card{
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    padding:22px;
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    transition:.35s;
+}
+
+.stats-card:hover{
+    transform:translateY(-5px);
+}
+
+.stats-icon{
+    width:65px;
+    height:65px;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:28px;
+}
+
+.stats-content h4{
+    color:#bfdbfe;
+    font-size:14px;
+    font-weight:500;
+}
+
+.stats-content h2{
+    color:white;
+    margin-top:6px;
+}
+
+/*==================================================
+            SCHEME SECTION
+==================================================*/
+
+.scheme-management{
+    display:grid;
+    grid-template-columns:35% 65%;
+    gap:25px;
+
+    margin-bottom:30px;
+}
+
+/*==================================================
+            SCHEME LIST
+==================================================*/
+
+.scheme-list-card,
+.scheme-details-card,
+.stats-card {
+    background: #ffffff !important;
+    border-radius: 25px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    padding: 25px !important;
+}
+
+.section-title h2,
+.details-header h2 {
+    color: #0f172a !important;
+    margin-bottom: 20px !important;
+}
+
+.scheme-scroll {
+    height: 650px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 5px;
+}
+
+.scheme-item {
+    background: #f8fafc !important;
+    border-radius: 18px !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 18px !important;
+    cursor: pointer !important;
+    transition: .3s !important;
+}
+
+.scheme-item:hover {
+    background: #f1f5f9 !important;
+}
+
+.active-scheme {
+    border: 2px solid #2563eb !important;
+    background: #eff6ff !important;
+}
+
+.scheme-item h3 {
+    color: #0f172a !important;
+    margin-bottom: 8px !important;
+    font-weight: 700 !important;
+}
+
+.scheme-item p {
+    color: #2563eb !important;
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+}
+
+.scheme-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #475569 !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+.scheme-details-card {
+    background: #ffffff !important;
+    border-radius: 25px !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 28px !important;
+}
+
+.details-header span {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #2563eb;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.scheme-description {
+    color: #475569 !important;
+    line-height: 1.8 !important;
+    font-size: 14.5px !important;
+    margin-bottom: 25px !important;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.details-grid div {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 18px !important;
+    border-radius: 16px !important;
+}
+
+.details-grid label {
+    display: block;
+    color: #64748b !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+}
+
+.details-grid h4 {
+    color: #0f172a !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+/* Notify Farmers Section & Checkboxes */
+.notification-card,
+.notify-card,
+.notify-farmers-card,
+.farmer-select-box,
+.quick-highlights-card,
+.highlights-card {
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+    padding: 25px !important;
+    color: #0f172a !important;
+}
+
+.notification-card h2,
+.notification-card h4,
+.farmer-selection h4,
+.message-box h4,
+.notify-card h3,
+.notify-card label,
+.farmer-select-box label,
+.checkbox-item label,
+.checkbox-label,
+.highlights-card h3,
+.highlights-card h4 {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+.checkbox-item span {
+    color: #0f172a !important;
+    font-weight: 600 !important;
+}
+
+.message-box textarea,
+.notify-card textarea,
+.message-textarea {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 16px !important;
+    padding: 15px !important;
+    font-size: 14px !important;
+}
+
+.message-box textarea::placeholder,
+.notify-card textarea::placeholder,
+.message-textarea::placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+}/*==================================================
+        APPLICATION FILTER BUTTONS
+==================================================*/
+
+.application-buttons{
+
+    display:flex;
+    gap:15px;
+    margin:30px 0 25px;
+    flex-wrap:wrap;
+
+}
+
+.filter-btn{
+
+    padding:12px 28px;
+    border:none;
+    outline:none;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(20px);
+
+    color:white;
+    font-size:15px;
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.filter-btn:hover{
+
+    transform:translateY(-3px);
+    background:rgba(59,130,246,.25);
+
+}
+
+.active-filter{
+
+    background:#2563eb;
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
+
+}
+
+/*==================================================
+            FARMER TABLE
+==================================================*/
+
+.farmer-table-container{
+
+    margin-top:20px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.farmer-table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+.farmer-table thead{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.farmer-table th{
+
+    padding:18px;
+
+    color:#ffffff;
+
+    text-align:left;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.farmer-table td{
+
+    padding:16px 18px;
+
+    color:#dbeafe;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+.farmer-table tbody tr{
+
+    transition:.3s;
+
+}
+
+.farmer-table tbody tr:hover{
+
+    background:rgba(59,130,246,.12);
+
+}
+
+/*==================================================
+        NOTIFICATION CARD
+==================================================*/
+
+.notification-card{
+
+    margin-top:35px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    padding:28px;
+
+}
+
+.notification-content{
+
+    display:grid;
+
+    grid-template-columns:35% 65%;
+
+    gap:25px;
+
+}
+
+/*==================================================
+        FARMER SELECTION
+==================================================*/
+
+.farmer-selection{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    padding:20px;
+
+}
+
+.farmer-selection h4{
+
+    color:white;
+
+    margin-bottom:18px;
+
+}
+
+.checkbox-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    max-height:300px;
+
+    overflow-y:auto;
+
+    padding-right:5px;
+
+}
+
+.checkbox-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#dbeafe;
+
+    cursor:pointer;
+
+    padding:12px 15px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.checkbox-item:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.checkbox-item input{
+
+    width:18px;
+    height:18px;
+
+    accent-color:#2563eb;
+
+}
+
+/*==================================================
+        MESSAGE BOX
+==================================================*/
+
+.message-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.message-box h4{
+
+    color:white;
+
+    margin-bottom:18px;
+
+}
+
+.message-box textarea{
+
+    width:100%;
+
+    min-height:220px;
+
+    resize:none;
+
+    border:none;
+    outline:none;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    font-size:15px;
+
+    color:white;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    line-height:1.7;
+
+}
+
+.message-box textarea::placeholder{
+
+    color:#bfdbfe;
+
+}
+
+.send-btn{
+
+    margin-top:22px;
+
+    width:220px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    padding:15px 22px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.send-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.35);
+
+}
+
+.send-btn svg{
+
+    font-size:16px;
+
+}
+
+/*==================================================
+            CUSTOM SCROLLBAR
+==================================================*/
+
+.scheme-scroll::-webkit-scrollbar,
+.checkbox-list::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.scheme-scroll::-webkit-scrollbar-track,
+.checkbox-list::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.scheme-scroll::-webkit-scrollbar-thumb,
+.checkbox-list::-webkit-scrollbar-thumb{
+
+    background:#3b82f6;
+
+    border-radius:20px;
+
+}
+
+.scheme-scroll::-webkit-scrollbar-thumb:hover,
+.checkbox-list::-webkit-scrollbar-thumb:hover{
+
+    background:#2563eb;
+
+}/*==================================================
+            SCHEME ANALYTICS
+==================================================*/
+
+.scheme-analytics{
+
+    display:grid;
+    grid-template-columns:4fr 3fr 3fr;
+    gap:24px;
+    margin:35px 0;
+
+}
+
+.chart-card{
+
+    background:rgba(255,255,255,.10);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+    padding:24px;
+
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(0,0.0.5);}

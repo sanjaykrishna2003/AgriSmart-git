@@ -1,0 +1,241 @@
+:root {
+  --bg-primary: #f4faf6;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --border-color: #e2f3e9;
+  --border-hover: #bbf7d0;
+  
+  --primary: #15803d; /* Forest Green for high readability */
+  --primary-hover: #166534;
+  --primary-glow: rgba(22, 163, 74, 0.15);
+  
+  --secondary: #0ea5e9;
+  --secondary-glow: rgba(14, 165, 233, 0.1);
+  
+  --warning: #d97706;
+  --danger: #dc2626;
+  --info: #0284c7;
+  
+  --text-main: #142f20; /* Very dark green/black for readable text */
+  --text-muted: #526f5e;
+  --text-light: #ffffff;
+  
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --transition-speed: 0.2s;
+}
+
+/* Custom Green Scrollbars */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #d8eadf;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 6px;
+  border: 2px solid #d8eadf;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #22c55e #d8eadf;
+}
+
+body {
+  background: #F8F6EC;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(22, 163, 74, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(22, 163, 74, 0.03) 0px, transparent 50%);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* High readability card */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(22, 100, 50, 0.04);
+  transition: all var(--transition-speed) ease;
+}
+
+.glass-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 25px rgba(22, 100, 50, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbdcd0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3c4ae;
+}
+
+/* UI Elements */
+input, select, textarea {
+  background: #ffffff;
+  border: 1px solid #c8dfd2;
+  border-radius: 8px;
+  color: var(--text-main);
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  width: 100%;
+  outline: none;
+  transition: all var(--transition-speed);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all var(--transition-speed) ease;
+  outline: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--text-light);
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--primary);
+  border: 1px solid #c8dfd2;
+  padding: 12px 24px;
+  font-size: 15px;
+}
+
+.btn-secondary:hover {
+  background: #f0f7f3;
+  border-color: var(--primary);
+}
+
+/* Navbar styles */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all var(--transition-speed);
+}
+
+.nav-button:hover {
+  color: var(--primary);
+  background: #f0f7f3;
+}
+
+.nav-button.active {
+  color: var(--primary);
+  background: #e2f3e9;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Status Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-farmer { background: #e2f3e9; color: var(--primary); }
+.badge-officer { background: #e0f2fe; color: #0284c7; }
+.badge-admin { background: #fef3c7; color: #d97706; }
+
+.badge-planted { background: #f3f4f6; color: #4b5563; }
+.badge-growing { background: #dcfce7; color: #166534; }
+.badge-harvested { background: #e0f2fe; color: #0369a1; }
+.badge-wasted { background: #fee2e2; color: #991b1b; }
+
+/* Override Leaflet default map ocean background to match theme */
+.leaflet-container {
+  background-color: #F8F6EC !important;
+}

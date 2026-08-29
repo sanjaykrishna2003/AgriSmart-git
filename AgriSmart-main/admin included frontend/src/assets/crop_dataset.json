@@ -1,0 +1,102 @@
+[
+  {
+    "cropName": "Rice (Paddy)",
+    "season": "Kharif",
+    "waterRequirement": "1500-2500 mm",
+    "fertilizerNPK": "120:60:60 (N:P:K kg/ha)",
+    "climate": "Hot and humid climate, average temperature of 22-32°C, abundant sunshine.",
+    "timeToGrowDays": 120,
+    "possibleRisks": "Blast disease, Stem Borer, Leaf Folder, Brown Plant Hopper, waterlogging/floods, drought during tillering.",
+    "idealSoil": "Clayey or clayey loam soil that retains moisture well."
+  },
+  {
+    "cropName": "Wheat",
+    "season": "Rabi",
+    "waterRequirement": "450-650 mm",
+    "fertilizerNPK": "120:50:40 (N:P:K kg/ha)",
+    "climate": "Cool growing season (10-15°C) and warm, dry weather at harvest (21-26°C).",
+    "timeToGrowDays": 130,
+    "possibleRisks": "Yellow Rust, Leaf Rust, Loose Smut, Aphids, sudden heatwaves in late spring (terminal heat stress).",
+    "idealSoil": "Well-drained fertile loamy or clayey-loam soils."
+  },
+  {
+    "cropName": "Maize (Corn)",
+    "season": "Kharif / Rabi",
+    "waterRequirement": "500-800 mm",
+    "fertilizerNPK": "120:60:40 (N:P:K kg/ha)",
+    "climate": "Warm weather (21-27°C) with moderate, well-distributed rainfall.",
+    "timeToGrowDays": 100,
+    "possibleRisks": "Fall Armyworm, Downy Mildew, Stem Borer, drought at silking/tasseling stages.",
+    "idealSoil": "Deep, well-drained alluvial or red soils."
+  },
+  {
+    "cropName": "Sugarcane",
+    "season": "Annual",
+    "waterRequirement": "1500-3000 mm",
+    "fertilizerNPK": "275:75:110 (N:P:K kg/ha)",
+    "climate": "Tropical and subtropical climate, warm and humid (20-35°C), long sun hours.",
+    "timeToGrowDays": 365,
+    "possibleRisks": "Red Rot, White Fly, Early Shoot Borer, frost during maturation, high water stress.",
+    "idealSoil": "Deep rich loamy soils, alluvial soils, or black cotton soils."
+  },
+  {
+    "cropName": "Cotton",
+    "season": "Kharif",
+    "waterRequirement": "700-1300 mm",
+    "fertilizerNPK": "80:40:40 (N:P:K kg/ha)",
+    "climate": "Warm and dry climate (21-30°C), minimum 180 frost-free days, dry harvest season.",
+    "timeToGrowDays": 150,
+    "possibleRisks": "Pink Bollworm, Jassids, Aphids, Boll Rot, heavy rains during boll opening stage.",
+    "idealSoil": "Deep, black cotton soils (regur) with excellent water retention."
+  },
+  {
+    "cropName": "Groundnut",
+    "season": "Kharif",
+    "waterRequirement": "450-650 mm",
+    "fertilizerNPK": "20:40:40 (N:P:K kg/ha)",
+    "climate": "Warm climate (21-30°C) with moderate rainfall, sensitive to standing water.",
+    "timeToGrowDays": 115,
+    "possibleRisks": "Tikka Leaf Spot, Collar Rot, Aphids, White Grub, poor pod filling due to calcium deficiency.",
+    "idealSoil": "Well-drained sandy loam or sandy soils containing calcium/organic matter."
+  },
+  {
+    "cropName": "Tomato",
+    "season": "Rabi / Kharif",
+    "waterRequirement": "400-600 mm",
+    "fertilizerNPK": "100:60:60 (N:P:K kg/ha)",
+    "climate": "Warm season crop, moderate temperatures (21-24°C). Extreme heat or frost drops blossoms.",
+    "timeToGrowDays": 90,
+    "possibleRisks": "Early Blight, Late Blight, Tomato Fruit Borer, Leaf Curl Virus, blossom end rot (calcium deficiency).",
+    "idealSoil": "Well-drained sandy loam or alluvial soils rich in organic matter."
+  },
+  {
+    "cropName": "Mustard",
+    "season": "Rabi",
+    "waterRequirement": "250-400 mm",
+    "fertilizerNPK": "80:40:40 (N:P:K kg/ha)",
+    "climate": "Cool climate (10-25°C) with low moisture and clear sunny days.",
+    "timeToGrowDays": 110,
+    "possibleRisks": "Alternaria Blight, Downy Mildew, Mustard Aphids, frost injury during flowering.",
+    "idealSoil": "Light to heavy sandy loam soil."
+  },
+  {
+    "cropName": "Chickpea (Gram)",
+    "season": "Rabi",
+    "waterRequirement": "250-350 mm",
+    "fertilizerNPK": "20:50:20 (N:P:K kg/ha)",
+    "climate": "Mild cool weather (15-25°C) with low humidity and frost-free conditions.",
+    "timeToGrowDays": 110,
+    "possibleRisks": "Fusarium Wilt, Pod Borer, Ascochyta Blight, waterlogging.",
+    "idealSoil": "Well-drained loamy to clayey soils with pH 6.0-9.0."
+  },
+  {
+    "cropName": "Potato",
+    "season": "Rabi",
+    "waterRequirement": "350-500 mm",
+    "fertilizerNPK": "120:100:120 (N:P:K kg/ha)",
+    "climate": "Cool weather, night temperatures below 20°C required for tuberization.",
+    "timeToGrowDays": 100,
+    "possibleRisks": "Late Blight, Early Blight, Potato Tuber Moth, Aphids, waterlogging, frost.",
+    "idealSoil": "Well-drained, loose, sandy loam soils rich in organic matter."
+  }
+]

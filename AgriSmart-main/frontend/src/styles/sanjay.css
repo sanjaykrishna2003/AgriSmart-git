@@ -1,0 +1,918 @@
+.dashboard {
+
+    min-height:100vh;
+
+    padding:120px 6% 60px;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,.65),
+        rgba(255,255,255,.65)
+    ),
+    url("https://images.pexels.com/photos/16651625/pexels-photo-16651625.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+/*==========================
+WELCOME
+===========================*/
+
+.dashboard-welcome-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(12, 175, 12, 0.18);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:30px;
+
+    padding:35px;
+
+    margin-bottom:35px;
+
+}
+
+.dashboard-welcome-card h1{
+
+    font-size:42px;
+
+    color:#222;
+
+}
+
+.dashboard-welcome-card h1 span{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#2E7D32;
+
+}
+
+.dashboard-welcome-card p{
+
+    margin-top:10px;
+
+    color:#555;
+
+    font-size:18px;
+
+}
+
+.dashboard-date-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.dashboard-date-card svg{
+
+    color:#2E7D32;
+
+    width:38px;
+
+    height:38px;
+
+}
+
+/*==========================
+SUMMARY
+===========================*/
+
+.dashboard-summary-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.dashboard-summary-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:25px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:25px;
+
+    transition: all .25s ease-in-out;
+
+    cursor: pointer;
+
+}
+
+.dashboard-summary-card:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.38);
+
+    border-color:rgba(255,255,255,.65);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+
+}
+
+.dashboard-summary-card h4{
+
+    color:#555;
+
+    margin-bottom:8px;
+
+}
+
+.dashboard-summary-card h2{
+
+    color:#1B5E20;
+
+    font-size:36px;
+
+}
+
+.dashboard-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.dashboard-icon svg{
+
+    width:34px;
+
+    height:34px;
+
+}
+
+.dashboard-green{
+
+    background:#dff5e3;
+
+    color:#2E7D32;
+
+}
+
+.dashboard-lightgreen{
+
+    background:#e8f9e8;
+
+    color:#43A047;
+
+}
+
+.dashboard-orange{
+
+    background:#fff0dc;
+
+    color:#ef6c00;
+
+}
+
+.dashboard-purple{
+
+    background:#efe5ff;
+
+    color:#7b1fa2;
+
+}
+
+/*==========================
+WEATHER
+===========================*/
+
+.dashboard-weather-card{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:30px;
+
+    padding:30px;
+
+}
+
+.dashboard-weather-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+.dashboard-weather-header svg{
+
+    color:#2E7D32;
+
+}
+
+.dashboard-weather-header h2{
+
+    color:#1B5E20;
+
+}
+
+.dashboard-weather-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.dashboard-weather-left{
+
+    text-align:center;
+
+    width:40%;
+
+}
+
+.dashboard-weather-icon{
+
+    width:90px;
+
+    height:90px;
+
+    color:#ff9800;
+
+}
+
+.dashboard-weather-left h1{
+
+    font-size:56px;
+
+    color:#1B5E20;
+
+}
+
+.dashboard-weather-left h3{
+
+    color:#555;
+
+}
+
+.dashboard-weather-right{
+
+    width:50%;
+
+}
+
+.dashboard-weather-right div{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.3);
+
+}
+
+.dashboard-weather-right svg{
+
+    color:#2E7D32;
+
+}
+
+.dashboard-weather-right span{
+
+    flex:1;
+
+    margin-left:15px;
+
+    color:#555;
+
+}
+
+.dashboard-weather-right strong{
+
+    color:#1B5E20;
+
+}/*==========================
+DASHBOARD GRID
+===========================*/
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:35px;
+
+}
+
+/*==========================
+GLASS PANELS
+===========================*/
+
+.dashboard-glass-panel{
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:25px;
+
+    padding:25px;
+
+}
+
+.dashboard-glass-panel h2{
+
+    color:#2E7D32;
+
+    margin-bottom:20px;
+
+}
+
+/*==========================
+SCROLL BOX
+===========================*/
+
+.dashboard-scroll-box{
+
+    max-height:300px;
+
+    overflow-y:auto;
+
+    padding-right:8px;
+
+}
+
+.dashboard-scroll-box::-webkit-scrollbar{
+
+    width:7px;
+
+}
+
+.dashboard-scroll-box::-webkit-scrollbar-track{
+
+    background:transparent;
+
+}
+
+.dashboard-scroll-box::-webkit-scrollbar-thumb{
+
+    background:#6dbb75;
+
+    border-radius:20px;
+
+}
+
+.dashboard-scroll-box::-webkit-scrollbar-thumb:hover{
+
+    background:#4CAF50;
+
+}
+
+/*==========================
+ADVISORY
+===========================*/
+
+.dashboard-advisory{
+
+    padding:18px;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    backdrop-filter:blur(18px);
+
+}
+
+.dashboard-advisory h4{
+
+    margin:0 0 8px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.dashboard-advisory p{
+
+    margin:0;
+
+    color:#444;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+}
+
+/* Red Alert */
+
+.dashboard-advisory.alert{
+
+    background:rgba(244,67,54,.18);
+
+    border:1px solid rgba(244,67,54,.35);
+
+}
+
+.dashboard-advisory.alert h4{
+
+    color:#c62828;
+
+}
+
+/* Yellow Warning */
+
+.dashboard-advisory.warning{
+
+    background:rgba(255,193,7,.18);
+
+    border:1px solid rgba(255,193,7,.35);
+
+}
+
+.dashboard-advisory.warning h4{
+
+    color:#ef6c00;
+
+}
+
+/* Blue Information */
+
+.dashboard-advisory.info{
+
+    background:rgba(33,150,243,.18);
+
+    border:1px solid rgba(33,150,243,.35);
+
+}
+
+.dashboard-advisory.info h4{
+
+    color:#1565c0;
+
+}
+
+/*==========================
+TODAY'S TASKS
+===========================*/
+
+.dashboard-task-item{
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    border-radius:15px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    transition:.3s;
+
+}
+
+.dashboard-task-item:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.dashboard-task-item h4{
+
+    margin:0;
+
+    color:#1B5E20;
+
+    font-size:18px;
+
+}
+
+.dashboard-task-item p{
+
+    margin-top:8px;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+/*==========================
+AI RECOMMENDATIONS
+===========================*/
+
+.dashboard-recommend-card{
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    border-radius:15px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    transition:.3s;
+
+}
+
+.dashboard-recommend-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.dashboard-recommend-card h4{
+
+    margin:0 0 8px;
+
+    color:#2E7D32;
+
+    font-size:18px;
+
+}
+
+.dashboard-recommend-card p{
+
+    margin:0;
+
+    color:#555;
+
+    line-height:1.5;
+
+}/*====================================
+UPCOMING EVENTS
+=====================================*/
+
+.dashboard-event-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:16px;
+
+    transition:.3s;
+
+}
+
+.dashboard-event-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+.dashboard-event-date{
+
+    min-width:75px;
+
+    height:75px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#2E7D32,#66BB6A);
+
+    color:#fff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 8px 18px rgba(46,125,50,.25);
+
+}
+
+.dashboard-event-month{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.dashboard-event-day{
+
+    font-size:28px;
+
+    font-weight:800;
+
+    margin-top:2px;
+
+}
+
+.dashboard-event-details{
+
+    flex:1;
+
+}
+
+.dashboard-event-details h4{
+
+    margin:0;
+
+    color:#1B5E20;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.dashboard-event-details p{
+
+    margin-top:8px;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+/*====================================
+SECTION HEADINGS
+=====================================*/
+
+.dashboard-section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:22px;
+
+}
+
+.dashboard-section-title svg{
+
+    width:28px;
+
+    height:28px;
+
+    color:#2E7D32;
+
+}
+
+.dashboard-section-title h2{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#1B5E20;
+
+}
+
+/*====================================
+SMALL ANIMATIONS
+=====================================*/
+
+.dashboard-summary-card,
+.dashboard-glass-panel,
+.dashboard-weather-card,
+.dashboard-event-card,
+.dashboard-task-item,
+.dashboard-recommend-card{
+
+    transition:all .3s ease;
+
+}
+
+.dashboard-glass-panel:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.dashboard-weather-card:hover{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.dashboard-summary-card:hover{
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+/*====================================
+RESPONSIVE
+=====================================*/
+
+@media (max-width:1200px){
+
+    .dashboard-summary-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:900px){
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .dashboard-weather-content{
+
+        flex-direction:column;
+
+        gap:30px;
+
+    }
+
+    .dashboard-weather-left,
+
+    .dashboard-weather-right{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .dashboard{
+
+        padding:100px 20px 40px;
+
+    }
+
+    .dashboard-welcome-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .dashboard-summary-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .dashboard-weather-left h1{
+
+        font-size:42px;
+
+    }
+
+    .dashboard-section-title h2{
+
+        font-size:20px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .dashboard-event-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .dashboard-event-date{
+
+        width:70px;
+
+        height:70px;
+
+    }
+
+}
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+*/
+
+/*==================================================
+OFFICER DASHBOARD
+==================================================*/
+/*==================================================
+OFFICER DASHBOARD
+==================================================*/
+/*====================================================
+OFFICER DASHBOARD - DARK GOVERNMENT ANALYTICS THEME
+====================================================*/
+/*==================================================
+COMMON DASHBOARD CARD
+==================================================*/
+
+/* ===========================
+   GLOBAL
+=========================== */
+/*==========================
+  MAIN LAYOUT
+===========================*/
+

@@ -1,0 +1,933 @@
+/* =====================================================
+                    GOV SCHEMES PAGE
+===================================================== */
+
+.govSchemesPage{
+
+    min-height:100vh;
+
+    background:#F6FAF5;
+
+    padding-bottom:80px;
+
+}
+
+/* =====================================================
+                    HERO
+===================================================== */
+
+.govSchemesHero{
+
+    background:
+        linear-gradient(rgba(18,92,41,.75),
+        rgba(18,92,41,.75)),
+        url("../assets/schemesHero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:#fff;
+
+    padding:90px 8%;
+
+}
+
+.govSchemesHero h1{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.govSchemesHero p{
+
+    width:650px;
+
+    max-width:100%;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    color:#E7F7E5;
+
+}
+
+/* =====================================================
+                    SEARCH
+===================================================== */
+
+.govSearchSection{
+
+    width:92%;
+
+    max-width:1400px;
+
+    margin:-38px auto 45px;
+
+}
+
+.govSchemeSearch{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 24px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.govSchemeSearch svg{
+
+    color:#2E7D32;
+
+}
+
+.govSchemeSearch input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font-size:16px;
+
+}
+
+.govSchemeSearch input::placeholder{
+
+    color:#888;
+
+}
+
+/* =====================================================
+                    LAYOUT
+===================================================== */
+
+.govSchemesLayout{
+
+    width:92%;
+
+    max-width:1450px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:300px 1fr;
+
+    gap:35px;
+
+}
+
+.govSchemesSidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+    position:sticky;
+
+    top:110px;
+
+    align-self:start;
+
+}
+
+.govSchemesMain{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/* =====================================================
+                    SIDEBAR
+===================================================== */
+
+.govSidebarCard{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    border:1px solid #E7EFE6;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
+
+}
+
+.govSidebarCard h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#2E7D32;
+
+    margin-bottom:22px;
+
+}
+
+.govSidebarCard h3 svg{
+
+    color:#43A047;
+
+}
+
+/* =====================================================
+                    DOCUMENTS
+===================================================== */
+
+.govDocumentList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.govDocumentItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    border:1px solid #E7EFE6;
+
+    background:#FAFCFA;
+
+}
+
+.govDocumentItem input{
+
+    width:18px;
+
+    height:18px;
+
+    accent-color:#2E7D32;
+
+}
+
+.govDocumentItem span{
+
+    font-size:15px;
+
+    color:#444;
+
+}
+
+/* =====================================================
+                    CATEGORY
+===================================================== */
+
+.govCategoryList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.govCategoryBtn{
+
+    border:none;
+
+    background:#F3F7F3;
+
+    border-radius:14px;
+
+    padding:14px 18px;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.govCategoryBtn:hover{
+
+    background:#E7F5E7;
+
+}
+
+.govCategoryBtn.active{
+
+    background:#2E7D32;
+
+    color:white;
+
+}
+
+/* =====================================================
+                    SECTION HEADER
+===================================================== */
+
+.govSectionHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.govSectionHeader h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#1B5E20;
+
+}
+
+.govSectionHeader span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+/* =====================================================
+                APPLIED SECTION
+===================================================== */
+
+.govAppliedSection{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    border:1px solid #E7EFE6;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+}
+
+.govAppliedCard{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 0;
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.govAppliedCard:last-child{
+
+    border-bottom:none;
+
+}
+
+.govAppliedLeft{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:center;
+
+}
+
+.govAppliedRight{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    align-items:flex-end;
+
+}
+
+/* =====================================================
+                    COMMON
+===================================================== */
+
+.govSchemeIcon{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:16px;
+
+    background:#EAF7EB;
+
+    color:#2E7D32;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.govSchemeCategory{
+
+    display:inline-flex;
+
+    padding:5px 12px;
+
+    background:#EAF7EB;
+
+    color:#2E7D32;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.govStatusBadge{
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.govStatusBadge.approved{
+
+    background:#DDF7E3;
+
+    color:#2E7D32;
+
+}
+
+.govStatusBadge.pending{
+
+    background:#FFF5D6;
+
+    color:#E67E22;
+
+}
+/* =====================================================
+                RECOMMENDATIONS
+===================================================== */
+
+.govRecommendationSection{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    border:1px solid #E7EFE6;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+}
+
+.govRecommendationGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:24px;
+
+}
+
+.govRecommendationCard{
+
+    background:linear-gradient(180deg,#F8FFF8,#EEF9EF);
+
+    border:1px solid #DDEEDD;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    transition:.3s;
+
+}
+
+.govRecommendationCard:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+
+}
+
+.govRecommendationTop{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:14px;
+
+}
+
+.govRecommendationCard h3{
+
+    margin:8px 0;
+
+    color:#1B5E20;
+
+    font-size:1.25rem;
+
+}
+
+.govRecommendationCard p{
+
+    color:#666;
+
+    line-height:1.5;
+
+    margin-bottom:14px;
+
+}
+
+.govMatchBadge{
+
+    background:#2E7D32;
+
+    color:#fff;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.govBenefitRow{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#2E7D32;
+
+    font-weight:600;
+
+    margin:12px 0;
+
+}
+
+.govMissingDocs{
+
+    background:#fff;
+
+    border-radius:14px;
+
+    padding:14px;
+
+    border:1px solid #EEF2EE;
+
+    margin-bottom:16px;
+
+}
+
+.govMissingDocs h4{
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+}
+
+.govMissingItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-bottom:6px;
+
+    color:#666;
+
+    font-size:13px;
+
+}
+
+.govMissingItem:last-child{
+
+    margin-bottom:0;
+
+}
+
+.govMissingItem svg{
+
+    color:#E53935;
+
+}
+
+/* =====================================================
+                ALL GOV SCHEMES
+===================================================== */
+
+.govAllSchemes{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    border:1px solid #E7EFE6;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+}
+
+.govSchemeGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:24px;
+
+    align-items:start;
+
+}
+
+.govSchemeCard{
+
+    background:#fff;
+
+    border:1px solid #E8EFE7;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-self:start;
+
+    transition:.3s;
+
+}
+
+.govSchemeCard:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+
+}
+
+.govSchemeCardTop{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:16px;
+
+}
+
+.govSchemeCard h3{
+
+    margin:8px 0;
+
+    color:#1B5E20;
+
+    font-size:1.2rem;
+
+}
+
+.govSchemeCard p{
+
+    color:#666;
+
+    line-height:1.5;
+
+    margin-bottom:14px;
+
+}
+
+.govSchemeButtons{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:14px;
+
+}
+
+.govSchemeButtons button{
+
+    flex:1;
+
+}
+
+/* =====================================================
+                    BUTTONS
+===================================================== */
+
+.govPrimaryBtn{
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#2E7D32;
+
+    color:#fff;
+
+    padding:11px 18px;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.govPrimaryBtn:hover{
+
+    background:#1B5E20;
+
+}
+
+.govOutlineBtn{
+
+    border:2px solid #2E7D32;
+
+    background:#fff;
+
+    color:#2E7D32;
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    transition:.3s;
+
+}
+
+.govOutlineBtn:hover{
+
+    background:#2E7D32;
+
+    color:#fff;
+
+}
+
+/* =====================================================
+                RESPONSIVE
+===================================================== */
+
+@media(max-width:992px){
+
+    .govSchemesLayout{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .govSchemesSidebar{
+
+        position:static;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .govSchemeGrid,
+
+    .govRecommendationGrid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .govAppliedCard{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:18px;
+
+    }
+
+    .govAppliedRight{
+
+        align-items:flex-start;
+
+        width:100%;
+
+    }
+
+    .govSchemeButtons{
+
+        flex-direction:column;
+
+    }
+
+    .govSchemeButtons button{
+
+        width:100%;
+
+    }
+
+}
+
+/* =====================================================
+                ANIMATIONS
+===================================================== */
+
+.govSidebarCard,
+
+.govAppliedSection,
+
+.govRecommendationSection,
+
+.govAllSchemes,
+
+.govSchemeCard,
+
+.govRecommendationCard{
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
+.govSidebarCard:hover,
+
+.govAppliedSection:hover,
+
+.govRecommendationSection:hover,
+
+.govAllSchemes:hover{
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.govSchemeSearch:focus-within{
+
+    box-shadow:
+
+        0 0 0 4px rgba(46,125,50,.12),
+
+        0 15px 35px rgba(0,0,0,.08);
+
+}
+
+/* =====================================================
+                SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2E7D32;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#EDF6ED;
+
+}
